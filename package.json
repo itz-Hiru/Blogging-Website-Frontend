@@ -10,8 +10,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@editorjs/code": "^2.9.3",
+    "@editorjs/editorjs": "^2.30.8",
+    "@editorjs/embed": "^2.7.6",
+    "@editorjs/header": "^2.8.8",
+    "@editorjs/image": "^2.10.2",
+    "@editorjs/inline-code": "^1.5.1",
+    "@editorjs/link": "^2.6.2",
+    "@editorjs/list": "^2.0.6",
+    "@editorjs/marker": "^1.4.0",
+    "@editorjs/quote": "^2.7.6",
+    "@flaticon/flaticon-uicons": "^3.3.1",
+    "axios": "^1.8.2",
+    "firebase": "^11.4.0",
+    "framer-motion": "^12.5.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
+    "react-router-dom": "^7.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -19,12 +35,14 @@
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.21.0",
-    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.12",
-    "vite": "^6.2.0"
+    "tailwindcss": "^4.0.13",
+    "tw-colors": "^3.3.2",
+    "vite": "^6.2.1"
   }
 }
