@@ -22,6 +22,7 @@
     "@editorjs/quote": "^2.7.6",
     "@flaticon/flaticon-uicons": "^3.3.1",
     "axios": "^1.8.2",
+    "dotenv": "^16.4.7",
     "firebase": "^11.4.0",
     "framer-motion": "^12.5.0",
     "react": "^19.0.0",
