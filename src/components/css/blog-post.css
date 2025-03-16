@@ -1,0 +1,12 @@
+.leadingPageCard {
+    background-color: rgba(139, 139, 139, 0.301);
+    padding: 15px;
+    border-radius: 15px;
+    margin: 2%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leadingPageCard:hover {
+    transform: translate(-5px, -5px) scale(1.03);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
