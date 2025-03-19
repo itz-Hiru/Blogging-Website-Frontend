@@ -1,0 +1,139 @@
+:root {
+    --background-dark: linear-gradient(135deg, #1c1c1c, #282828);
+    --background-light: linear-gradient(135deg, #f0f0f0, #ffffff);
+    --text-dark: #e0e0e0;
+    --text-light: #333333;
+    --pattern-dark-top: conic-gradient(from 180deg at 75% 75%, #00c6ff, #0072ff, #00c6ff, #0072ff);
+    --pattern-light-top: conic-gradient(from 180deg at 75% 75%, #ffb6c1, #ff69b4, #ffb6c1, #ff69b4);
+    --pattern-dark-bottom: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --pattern-light-bottom: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+    --form-bg-dark: linear-gradient(135deg, #2c2c2c, #3c3c3c);
+    --form-bg-light: linear-gradient(135deg, #ffffff, #f7f7f7);
+    --form-border-dark: rgba(255, 255, 255, 0.2);
+    --form-border-light: rgba(0, 0, 0, 0.1);
+}
+
+.loginPage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    background: var(--background-light);
+    color: var(--text-light);
+    transition: background 0.5s ease, color 0.3s ease;
+    z-index: 1;
+}
+
+[data-theme="dark"] .loginPage {
+    background: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.loginPage::before,
+.loginPage::after {
+    content: "";
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    opacity: 0.85;
+    filter: blur(10px);
+    transform: scale(1.05);
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    animation: rotatePattern 15s linear infinite;
+    pointer-events: none;
+}
+
+.loginPage::before {
+    top: -15%;
+    right: -15%;
+    background: var(--pattern-light-top);
+    transform-origin: 75% 75%;
+}
+
+.loginPage::after {
+    bottom: -15%;
+    left: -15%;
+    background: var(--pattern-light-bottom);
+    transform-origin: 25% 25%;
+    animation-direction: reverse;
+}
+
+[data-theme="dark"] .loginPage::before {
+    background: var(--pattern-dark-top);
+}
+
+[data-theme="dark"] .loginPage::after {
+    background: var(--pattern-dark-bottom);
+}
+
+.loginPage:hover::before,
+.loginPage:hover::after {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+#formElement {
+    position: relative;
+    padding: 40px;
+    background: var(--form-bg-light);
+    border-radius: 10px;
+    border: 1px solid var(--form-border-light);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    color: var(--text-light);
+    transition: background 0.5s ease, color 0.3s ease, border 0.3s ease;
+    z-index: 2;
+}
+
+[data-theme="dark"] #formElement {
+    background: var(--form-bg-dark);
+    border: 1px solid var(--form-border-dark);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    color: var(--text-dark);
+}
+
+@keyframes rotatePattern {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .loginPage::before,
+    .loginPage::after {
+        width: 55vw;
+        height: 55vw;
+        top: -12%;
+        right: -12%;
+        bottom: -12%;
+        left: -12%;
+    }
+
+    #formElement {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loginPage {
+        padding: 10px;
+    }
+
+    .loginPage::before,
+    .loginPage::after {
+        width: 60vw;
+        height: 60vw;
+        top: -8%;
+        right: -8%;
+        bottom: -8%;
+        left: -8%;
+    }
+}
