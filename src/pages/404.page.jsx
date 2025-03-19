@@ -1,10 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../App";
 import lightPageNotFoundImg from "../assets/404-light.png";
 import darkPageNotFoundImg from "../assets/404-dark.png";
 import lightFullLogo from "../assets/full-logo-light.png";
 import darkFullLogo from "../assets/full-logo-dark.png";
-import { ThemeContext } from "../App";
-import { useContext } from "react";
 
 const PageNotFound = () => {
   let { theme } = useContext(ThemeContext);

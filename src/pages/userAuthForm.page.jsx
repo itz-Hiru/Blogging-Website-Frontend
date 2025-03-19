@@ -1,10 +1,9 @@
 import axios from "axios";
 import "./css/userAuthForm.css";
-import axios from "axios";
 import { useContext } from "react";
-import { UserContext } from "../App";
 import { Link, Navigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
+import { UserContext } from "../App";
 import googleIcon from "../assets/google.png";
 import AnimationWrapper from "../common/page-animation";
 import InputBox from "../components/input.component";

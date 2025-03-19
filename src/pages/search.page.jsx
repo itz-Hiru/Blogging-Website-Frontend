@@ -1,6 +1,6 @@
 import axios from "axios";
-import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import AnimationWrapper from "../common/page-animation";
 import { filterPaginationData } from "../common/filter-pagination-data";
 import BlogPostCard from "../components/blog-post.component";

@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import { getDay } from "../common/date";
-import { useContext, useState } from "react";
-import NotificationCommentField from "./notification-comment-field.component";
-import { UserContext } from "../App";
 import axios from "axios";
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { UserContext } from "../App";
+import { getDay } from "../common/date";
+import NotificationCommentField from "./notification-comment-field.component";
 
 const NotificationCard = ({ data, index, notificationState }) => {
   let [isReplying, setReplying] = useState(false);

@@ -1,9 +1,9 @@
 import axios from "axios";
-import AnimationWrapper from "../common/page-animation";
-import InputBox from "../components/input.component";
 import { useContext, useRef } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import { UserContext } from "../App";
+import AnimationWrapper from "../common/page-animation";
+import InputBox from "../components/input.component";
 
 const ChangePassword = () => {
   let {

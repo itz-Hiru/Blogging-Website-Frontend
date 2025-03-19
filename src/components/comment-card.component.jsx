@@ -1,10 +1,10 @@
+import axios from "axios";
 import { useContext, useState } from "react";
-import { getDay } from "../common/date";
-import { UserContext } from "../App";
 import toast from "react-hot-toast";
+import { UserContext } from "../App";
+import { getDay } from "../common/date";
 import CommentField from "./comment-field.component";
 import { BlogContext } from "../pages/blog.page";
-import axios from "axios";
 
 const CommentCard = ({ index, leftVal, commentData }) => {
   let {

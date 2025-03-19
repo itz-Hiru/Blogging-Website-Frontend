@@ -1,11 +1,11 @@
+import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { ThemeContext, UserContext } from "../App";
-import axios from "axios";
+import { storeInSession } from "../common/session";
 import darkLogo from "../assets/logo-dark.png";
 import lightLogo from "../assets/logo-light.png";
 import UserNavigationPanel from "./user-navigation.component";
-import { storeInSession } from "../common/session";
 
 const Navbar = () => {
   const [searchBoxVisibility, setSearchBoxVisibility] = useState(false);

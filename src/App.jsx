@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import { lookInSession } from "./common/session";
 import Navbar from "./components/navbar.component";
 import SideNav from "./components/sidenavbar.component";
-import { lookInSession } from "./common/session";
 import Editor from "./pages/editor.pages";
 import HomePage from "./pages/home.page";
 import SearchPage from "./pages/search.page";

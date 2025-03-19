@@ -1,13 +1,13 @@
-import { useContext, useEffect, useRef, useState } from "react";
-import { UserContext } from "../App";
 import axios from "axios";
-import { profileDataStructure } from "./profile.page";
-import AnimationWrapper from "../common/page-animation";
-import Loader from "../components/loader.component";
+import { useContext, useEffect, useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import InputBox from "../components/input.component";
+import { UserContext } from "../App";
 import { uploadImage } from "../common/aws";
 import { storeInSession } from "../common/session";
+import AnimationWrapper from "../common/page-animation";
+import Loader from "../components/loader.component";
+import InputBox from "../components/input.component";
+import { profileDataStructure } from "./profile.page";
 
 const EditProfile = () => {
   let {

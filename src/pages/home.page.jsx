@@ -1,13 +1,13 @@
 import axios from "axios";
-import AnimationWrapper from "../common/page-animation";
-import InPageNavigation from "../components/inpage-navigation.component";
 import { useEffect, useState } from "react";
+import AnimationWrapper from "../common/page-animation";
+import { filterPaginationData } from "../common/filter-pagination-data";
+import InPageNavigation from "../components/inpage-navigation.component";
 import Loader from "../components/loader.component";
 import BlogPostCard from "../components/blog-post.component";
 import MinimalBlogPost from "../components/nobanner-blog-post.component";
 import { activeTabRef } from "../components/inpage-navigation.component";
 import NoDataMessage from "../components/nodata.component";
-import { filterPaginationData } from "../common/filter-pagination-data";
 import LoadMoreDataBtn from "../components/load-more.component";
 
 const HomePage = () => {

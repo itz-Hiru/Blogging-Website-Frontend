@@ -1,11 +1,11 @@
-import { Toaster, toast } from "react-hot-toast";
-import AnimationWrapper from "../common/page-animation";
-import { useContext } from "react";
-import { EditorContext } from "../pages/editor.pages";
-import Tag from "./tags.component";
 import axios from "axios";
-import { UserContext } from "../App";
+import { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { Toaster, toast } from "react-hot-toast";
+import { UserContext } from "../App";
+import AnimationWrapper from "../common/page-animation";
+import Tag from "./tags.component";
+import { EditorContext } from "../pages/editor.pages";
 
 const PublishForm = () => {
   let characterLimit = 200;

@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import { BlogContext } from "../pages/blog.page";
-import CommentField from "./comment-field.component";
 import axios from "axios";
-import NoDataMessage from "./nodata.component";
+import { useContext } from "react";
 import AnimationWrapper from "../common/page-animation";
 import CommentCard from "./comment-card.component";
+import CommentField from "./comment-field.component";
+import NoDataMessage from "./nodata.component";
+import { BlogContext } from "../pages/blog.page";
 
 export const fetchComments = async ({
   skip = 0,

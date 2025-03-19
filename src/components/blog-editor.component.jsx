@@ -1,17 +1,17 @@
+import axios from "axios";
+import { useContext, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { Toaster, toast } from "react-hot-toast";
+import EditorJS from "@editorjs/editorjs";
+import { ThemeContext, UserContext } from "../App";
+import { uploadImage } from "../common/aws";
+import AnimationWrapper from "../common/page-animation";
 import lightLogo from "../assets/logo-light.png";
 import darkLogo from "../assets/logo-dark.png";
-import AnimationWrapper from "../common/page-animation";
 import lightBanner from "../assets/blog banner light.png";
 import darkBanner from "../assets/blog banner dark.png";
-import { uploadImage } from "../common/aws";
-import { useContext, useEffect } from "react";
-import { Toaster, toast } from "react-hot-toast";
-import { EditorContext } from "../pages/editor.pages";
-import EditorJS from "@editorjs/editorjs";
 import { tools } from "./tools.component";
-import axios from "axios";
-import { ThemeContext, UserContext } from "../App";
+import { EditorContext } from "../pages/editor.pages";
 
 const BlogEditor = () => {
   let {
